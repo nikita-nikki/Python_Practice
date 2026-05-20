@@ -24,5 +24,3 @@ print(digits)
 "copy"
 new_list = digits.copy()
 print(new_list)
-
-
