@@ -17,19 +17,139 @@ try:
     num = int("abc")
 except ValueError:
     print("Invalid number")
+print('\n')
 
 
-# Multiple Exceptions
+# 1. ZeroDivisionError
+print("\nZeroDivisionError")
+
 try:
-    num = 10 / 0
-except ValueError:
-    print("Value Error")
+    a = 10
+    b = 0   
+    print("Result =", a / b)
+
 except ZeroDivisionError:
     print("Cannot divide by zero")
 
 
-# Catching Multiple Exceptions Together
+
+# 2. ValueError
+print("\nValueError")
+
 try:
-    num = int("abc")
-except (ValueError, TypeError):
-    print("Some error occurred")
+    num = int("abc")   
+    print("Your entered integer is:", num)
+
+except ValueError:
+    print("Invalid integer")
+
+
+
+# 3. Multiple Exceptions
+print("\nMultiple Exceptions")
+
+try:
+    x = 10
+    y = 0
+    print(x / y)
+
+except ValueError:
+    print("Please enter numbers only")
+
+except ZeroDivisionError:
+    print("Division by zero is not allowed")
+
+
+
+# 4. IndexError
+print("\nIndexError")
+
+numbers = [10, 20, 30, 40]
+
+try:
+    index = 10   # invalid index
+    print(numbers[index])
+
+except IndexError:
+    print("Index out of range")
+
+
+
+# 5. KeyError
+print("\nKeyError")
+
+student = {
+    "John": 90,
+    "Alice": 95
+}
+
+try:
+    print(student["Bob"])  # key doesn't exist
+
+except KeyError:
+    print("Key not found")
+
+
+
+
+
+# 6. Else Block
+print("\nElse Block")
+
+try:
+    num = int("42")  # valid input
+
+except ValueError:
+    print("Invalid input")
+
+else:
+    print("No exception occurred")
+    print("Number =", num)
+
+
+
+# 7. Finally Block
+print("\nFinally block")
+
+try:
+    num = int("100")
+    print(num)
+
+except ValueError:
+    print("Invalid input")
+
+else:
+    print("No exception occurred")
+    print("Number =", num)
+
+finally:
+    print("This always executes")
+
+
+
+# 8. Generic Exception
+print("\nGeneric Exception")
+
+try:
+    a = 10
+    b = 0
+    print(a / b)
+
+except Exception as e:
+    print("Error:", e)
+
+
+
+# 9. Raise Custom Exception
+print("\nRaise Custom Exception" )
+
+try:
+    age = 16
+
+    if age < 18:
+        raise ValueError("Age must be at least 18")
+
+    print("Eligible")
+
+except ValueError as e:
+    print(e)
