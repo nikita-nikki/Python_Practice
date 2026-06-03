@@ -35,7 +35,3 @@ print("DICTIONARY COMPREHENSION")
 d = {i: i * i for i in range(5)}
 print(d)
 
-names = ["Alice", "Bob", "Charlie"]
-scores = [90, 85, 95]
-result = {name: score for name, score in zip(names, scores)}
-print(result)

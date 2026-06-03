@@ -21,3 +21,4 @@ else:
     print("Finished")
 
 print("Done")
+# else runs only if loop completes normally.
