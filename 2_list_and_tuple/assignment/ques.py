@@ -38,7 +38,6 @@ print("After removing element at position 4:", my_list)
 my_list.remove('Pineapple')
 print("After removing 'Pineapple':", my_list)
 
-
 # =========================
 # Part 2 — Pair Sum Problem
 # =========================

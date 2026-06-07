@@ -97,7 +97,7 @@ except KeyError:
 print("\nElse Block")
 
 try:
-    num = int("42")  # valid input
+    num = int("42")  
 
 except ValueError:
     print("Invalid input")
