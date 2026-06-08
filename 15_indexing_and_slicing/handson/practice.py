@@ -72,6 +72,18 @@ print("\nREVERSING")
 print("Original:", name)
 print("Reversed:", name[::-1])
 
+# when start or stop are omitted, Python does not simply substitute 0 or len(s).
+# name[::-1]
+# Start at last character
+# Stop before the first character
+
+#           D  e  v  e  l  o  p  e  r
+# Index     0  1  2  3  4  5  6  7  8
+
+# Virtual stop
+#      ^
+#     -1 position (before index 0)
+
 
 # 7. NEGATIVE SLICING
 
@@ -81,6 +93,7 @@ print("\nNEGATIVE SLICING")
 print("name[-5:] =", name[-5:])
 print("name[:-3] =", name[:-3])
 print("name[-7:-2] =", name[-7:-2])
+
 
 # 8. EDGE CASE - INDEX OUT OF RANGE
 
@@ -99,9 +112,9 @@ except IndexError as e:
 
 print("\nEDGE CASE: SLICING OUT OF RANGE")
 
-print(text[0:100])
-print(text[100:200])
-print(text[-100:100])
+print("text[0:100]: ", text[0:100])
+print("text[100:200]: ", text[100:200])
+print("text[-100:200]: ",text[-100:100])
 
 # =====================================================
 # 10. EDGE CASE - EMPTY SLICE
@@ -109,8 +122,8 @@ print(text[-100:100])
 
 print("\nEDGE CASE: EMPTY SLICE")
 
-print(text[3:3])    # ''
-print(text[5:2])    # ''
+print("text[3:3]: ",text[3:3])    # ''
+print("text[5:2]: ",text[5:2])    # ''
 
 # =====================================================
 # 11. EDGE CASE - STEP = 0
@@ -131,7 +144,7 @@ print("\nNEGATIVE STEP")
 
 print(text[::-1])
 print(text[::-2])
-print(text[4:1:-1])
+print("text[4:1:-1]",text[4:1:-1])
 
 # =====================================================
 # 13. LIST SLICING
@@ -192,34 +205,21 @@ print("\nIMPORTANT EDGE CASES")
 s = "HELLO"
 
 # Start > End with positive step
-print(s[4:1])       # ''
+print("s[4:1]:", s[4:1])       # ''
 
 # Start < End with negative step
-print(s[1:4:-1])    # ''
+print("s[1:4:-1]:", s[1:4:-1])    # ''
 
 # Reverse complete string
-print(s[::-1])      # OLLEH
+print("s[::-1]", s[::-1])      # OLLEH
 
 # Reverse from index 4 to 1
-print(s[4:1:-1])    # OLL
+print("s[4:1:-1]:" ,s[4:1:-1])    # OLL
 
 # Huge indexes
-print(s[100:500])   # ''
-print(s[-500:500])  # HELLO
+print("s[100:500]: ", s[100:500])   # ''
+print("s[-500:500]:", s[-500:500])  # HELLO
 
-# =====================================================
-# 18. INTERVIEW PRACTICE QUESTIONS
-# =====================================================
 
-print("\nPRACTICE")
-
-sample = "PROGRAMMING"
-
-print("sample[-1]    =", sample[-1])
-print("sample[::-1]  =", sample[::-1])
-print("sample[2:8]   =", sample[2:8])
-print("sample[-5:-1] =", sample[-5:-1])
-print("sample[::2]   =", sample[::2])
-print("sample[::-2]  =", sample[::-2])
 
 
