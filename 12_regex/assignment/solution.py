@@ -49,6 +49,8 @@ dates = re.findall(
     text
 )
 
+# \b -  word boundary is a position where a word starts or ends.
+# (?:pattern) It means: "Group these regex parts together, but don't save the matched text as a capture group."
 print("Dates:", dates)
 
 
