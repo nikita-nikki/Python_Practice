@@ -61,7 +61,7 @@ while True:
 # TASK 4: GENERATOR COUNT UP TO N
 # --------------------------------------------------
 
-print("\nTASK 7")
+print("\nTASK 4")
 
 
 def count_up_to(n):
@@ -77,7 +77,7 @@ for num in count_up_to(5):
 # TASK 5: SQUARE GENERATOR
 # --------------------------------------------------
 
-print("\nTASK 8")
+print("\nTASK 5")
 
 
 def square_generator(n):
@@ -102,7 +102,7 @@ for value in square_generator(-3):
 # TASK 6: INFINITE GENERATOR
 # --------------------------------------------------
 
-print("\nTASK 9")
+print("\nTASK 6")
 
 
 def infinite_numbers():
@@ -123,7 +123,7 @@ for _ in range(10):
 # TASK 7: EXHAUSTED GENERATOR
 # --------------------------------------------------
 
-print("\nTASK 11")
+print("\nTASK 7")
 
 gen = (x for x in range(3))
 
