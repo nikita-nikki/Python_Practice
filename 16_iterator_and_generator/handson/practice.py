@@ -36,6 +36,7 @@ except StopIteration:
     print("StopIteration occurred")
 
 
+
 # --------------------------------------------------
 # TASK 3: NEXT() WITH DEFAULT VALUE
 # --------------------------------------------------
@@ -57,112 +58,7 @@ while True:
 
 
 # --------------------------------------------------
-# TASK 4: COUNT FROM 1 TO N
-# --------------------------------------------------
-
-print("\nTASK 4")
-
-
-class Counter:
-
-    def __init__(self, n):
-        self.n = n
-        self.current = 1
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.current > self.n:
-            raise StopIteration
-
-        value = self.current
-        self.current += 1
-        return value
-
-
-for num in Counter(5):
-    print(num)
-
-
-# --------------------------------------------------
-# TASK 5: REVERSE ITERATOR
-# --------------------------------------------------
-
-print("\nTASK 5")
-
-
-class ReverseString:
-
-    def __init__(self, text):
-        self.text = text
-        self.index = len(text) - 1
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.index < 0:
-            raise StopIteration
-
-        char = self.text[self.index]
-        self.index -= 1
-        return char
-
-
-for ch in ReverseString("Python"):
-    print(ch)
-
-print("Empty string test:")
-
-for ch in ReverseString(""):
-    print(ch)
-
-
-# --------------------------------------------------
-# TASK 6: EVEN NUMBER ITERATOR
-# --------------------------------------------------
-
-print("\nTASK 6")
-
-
-class EvenNumbers:
-
-    def __init__(self, limit):
-        self.limit = limit
-        self.current = 2
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.current > self.limit:
-            raise StopIteration
-
-        value = self.current
-        self.current += 2
-        return value
-
-
-print("Limit = 10")
-for num in EvenNumbers(10):
-    print(num)
-
-print("Limit = 0")
-for num in EvenNumbers(0):
-    print(num)
-
-print("Limit = -5")
-for num in EvenNumbers(-5):
-    print(num)
-
-print("Limit = 1")
-for num in EvenNumbers(1):
-    print(num)
-
-
-# --------------------------------------------------
-# TASK 7: GENERATOR COUNT UP TO N
+# TASK 4: GENERATOR COUNT UP TO N
 # --------------------------------------------------
 
 print("\nTASK 7")
@@ -178,7 +74,7 @@ for num in count_up_to(5):
 
 
 # --------------------------------------------------
-# TASK 8: SQUARE GENERATOR
+# TASK 5: SQUARE GENERATOR
 # --------------------------------------------------
 
 print("\nTASK 8")
@@ -203,7 +99,7 @@ for value in square_generator(-3):
 
 
 # --------------------------------------------------
-# TASK 9: INFINITE GENERATOR
+# TASK 6: INFINITE GENERATOR
 # --------------------------------------------------
 
 print("\nTASK 9")
@@ -224,22 +120,7 @@ for _ in range(10):
 
 
 # --------------------------------------------------
-# TASK 10: GENERATOR EXPRESSION VS LIST
-# --------------------------------------------------
-
-print("\nTASK 10")
-
-nums = range(1000000)
-
-list_comp = [x * x for x in nums]
-gen_exp = (x * x for x in nums)
-
-print(type(list_comp))
-print(type(gen_exp))
-
-
-# --------------------------------------------------
-# TASK 11: EXHAUSTED GENERATOR
+# TASK 7: EXHAUSTED GENERATOR
 # --------------------------------------------------
 
 print("\nTASK 11")
