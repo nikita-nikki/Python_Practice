@@ -1,6 +1,6 @@
 """
 ===========================================================
-PYTHON OOP — ABSTRACTION (Industry Style)
+PYTHON OOP — ABSTRACTION 
 ===========================================================
 
 WHAT IS ABSTRACTION?
@@ -230,26 +230,10 @@ order = OrderService(sms)
 order.place_order("intern@company.com")
 
 
+
+
 # ==========================================================
 # EDGE CASE 1
-# ==========================================================
-
-"""
-Cannot create abstract class directly.
-
-UNCOMMENT:
-
-x = NotificationService()
-
-ERROR:
-
-TypeError:
-Can't instantiate abstract class
-"""
-
-
-# ==========================================================
-# EDGE CASE 2
 # ==========================================================
 
 class BrokenNotification(NotificationService):
@@ -276,41 +260,18 @@ This protects industry code.
 
 
 # ==========================================================
-# OUTPUT
+# EDGE CASE 2
 # ==========================================================
 
 """
-Processing order...
-Order created
-[EMAIL] Sent to intern@company.com
+Cannot create abstract class directly.
 
-Processing order...
-Order created
-[SLACK] Message delivered
+UNCOMMENT:
 
-Processing order...
-Order created
-[SMS] Sent
-"""
+x = NotificationService()
 
+ERROR:
 
-"""
-FINAL UNDERSTANDING
-
-Encapsulation:
-    Hide DATA
-
-Abstraction:
-    Hide IMPLEMENTATION
-
-Polymorphism:
-    Same method → different behavior
-
-Inheritance:
-    Reuse/extend classes
-
-Industry sentence:
-
-"Code against abstractions,
-not implementations."
+TypeError:
+Can't instantiate abstract class
 """
